@@ -23,11 +23,21 @@ const Home = () => {
   const [currentTopAd, setCurrentTopAd] = useState(topAds[0]);
   const [currentMiddleAd, setCurrentMiddleAd] = useState(middleAds[0]);
   const [currentBottomAd, setCurrentBottomAd] = useState(bottomAds[0]);
-
-  console.log("Top Ads", topAds);
-  console.log("Middle Ads", middleAds);
-  console.log("Bottom Ads", bottomAds);
-  console.log("Current Top Ad", currentTopAd);
+  
+  // Check if user has viewed the TV product
+  const [hasViewedTV, setHasViewedTV] = useState(false);
+  const [lastViewedProductId, setLastViewedProductId] = useState(null);
+  
+  // Load view history from localStorage
+  useEffect(() => {
+    // Check localStorage for product view flags
+    const hasViewedProduct = localStorage.getItem('hasViewedProduct') === 'true';
+    const productId = localStorage.getItem('lastViewedProductId');
+    
+    // Only show targeted ad if user viewed the TV product (id: 3)
+    setHasViewedTV(hasViewedProduct && productId === '3');
+    setLastViewedProductId(productId);
+  }, []);
   
   // Rotate ads periodically
   useEffect(() => {
@@ -53,14 +63,33 @@ const Home = () => {
     
     return () => clearInterval(rotationInterval);
   }, [topAds, middleAds, bottomAds]);
+  
+  // Function to clear view history for testing
+  const clearViewHistory = () => {
+    localStorage.removeItem('hasViewedProduct');
+    localStorage.removeItem('lastViewedProductId');
+    localStorage.removeItem('lastViewedProductName');
+    localStorage.removeItem('productComment');
+    setHasViewedTV(false);
+    setLastViewedProductId(null);
+  };
 
   return (
     <div className="home-page">
-      {/* Banner component */}
       <Banner />
       
-      {/* Add a clear visual separator */}
-      <div style={{ height: '20px', clear: 'both' }}></div>
+      {/* Show targeted ad only if user viewed the TV */}
+      {hasViewedTV && currentTopAd && (
+        <div className="targeted-ad-container">
+          <div className="targeted-ad-label">Based on your recent viewing</div>
+          <AdSlot
+            id={currentTopAd._id}
+            image={currentTopAd.image}
+            alt={currentTopAd.altText}
+            link={`/product/${lastViewedProductId}`}
+          />
+        </div>
+      )}
       
       <section className="featured-products">
         <h2 className="section-title">Featured Products</h2>
@@ -76,21 +105,13 @@ const Home = () => {
         </div>
       </section>
       
-      {/* Top Ad Slot */}
-      {currentTopAd && (
-        <AdSlot
-            id={currentTopAd._id}
-            image={currentTopAd.image}
-            alt={currentTopAd.altText}
-            link={currentTopAd.link}
-          />
-      )}
       <section className="deals-section">
         <h2 className="section-title">Today's Deals</h2>
         <ProductGrid products={dealsProducts} />
       </section>
       
-      {currentMiddleAd && (
+      {/* Don't show any ads unless user has viewed the TV */}
+      {hasViewedTV && currentMiddleAd && (
         <AdSlot
           id={currentMiddleAd._id}
           image={currentMiddleAd.image}
@@ -104,13 +125,22 @@ const Home = () => {
         <ProductGrid products={recommendedProducts} />
       </section>
       
-      {currentBottomAd && (
+      {!hasViewedTV && currentBottomAd && (
         <AdSlot
           id={currentBottomAd._id}
           image={currentBottomAd.image}
           alt={currentBottomAd.altText}
           link={currentBottomAd.link}
         />
+      )}
+      
+      {/* Testing controls - hidden in production */}
+      {hasViewedTV && (
+        <div className="testing-controls">
+          <button onClick={clearViewHistory} className="clear-history-btn">
+            Clear View History
+          </button>
+        </div>
       )}
     </div>
   );

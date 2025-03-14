@@ -241,23 +241,23 @@ export const products = [
       recommended: true
     }
   ];
-  
+
+import sound from '../images/soundsystem.png';
+import hdmi from '../images/hdmi.png';
   // Ad data
   export const ads = [
     {
       _id: 'ad1',
-      name: 'Summer Sale Banner',
-      image: banner2,
+      name: ' Premium Soundbar System',
+      image: sound,
       link: '/category/deals',
-      altText: 'Summer Sale - Up to 50% off',
       position: 'home-top'
     },
     {
       _id: 'ad2',
-      name: 'New Electronics',
-      image: '/api/placeholder/1200/120',
+      name: '4K HDMI Cable',
+      image: hdmi,
       link: '/category/electronics',
-      altText: 'Discover the latest electronics',
       position: 'home-middle'
     },
     {
@@ -268,30 +268,30 @@ export const products = [
       altText: 'Kitchen Appliance Sale',
       position: 'category'
     },
-    {
-      _id: 'ad4',
-      name: 'Limited Time Offer',
-      image: '/api/placeholder/1200/120',
-      link: '/product/5',
-      altText: 'Limited Time Offer on Robot Vacuums',
-      position: 'product'
-    },
-    {
-      _id: 'ad5',
-      name: 'Free Shipping Promotion',
-      image: '/api/placeholder/1200/120',
-      link: '/category/deals',
-      altText: 'Free Shipping on Orders over $50',
-      position: 'home-bottom'
-    },
-    {
-      _id: 'ad6',
-      name: 'Holiday Special',
-      image: '/api/placeholder/1200/120',
-      link: '/category/deals',
-      altText: 'Holiday Special Deals',
-      position: 'home-top'
-    }
+    // { 
+    //   id: 1, 
+    //   name: "Premium Soundbar System", 
+    //   image: "https://images.unsplash.com/photo-1545454675-3531b543be5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", 
+    //   description: "Enhance your TV experience with immersive surround sound and deep bass",
+    //   price: "$249.99",
+    //   rating: 4.8
+    // },
+    // { 
+    //   id: 2, 
+    //   title: "4K HDMI Cable", 
+    //   image: "https://images.unsplash.com/photo-1633154866401-abb95bac3b51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80", 
+    //   description: "Ultra high-speed HDMI 2.1 cable for perfect 4K and 8K picture quality",
+    //   price: "$19.99",
+    //   rating: 4.9
+    // },
+    // {
+    //   id: 3,
+    //   title: "Wireless Surround Speakers",
+    //   image: "https://images.unsplash.com/photo-1551721434-8b94ddff0e6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+    //   description: "Complete your home theater with these wireless rear speakers for immersive audio",
+    //   price: "$149.99",
+    //   rating: 4.7
+    // },
   ];
   
   // Categories

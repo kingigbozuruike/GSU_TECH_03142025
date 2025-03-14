@@ -1,8 +1,48 @@
-.ad-slot-wrapper {
+.testing-controls {
+  margin-top: 30px;
+  border-top: 1px dashed #ddd;
+  padding-top: 20px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.clear-history-btn {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  border-radius: 4px;
+  color: #777;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.clear-history-btn:hover {
+  background-color: #f0f0f0;
+}.targeted-ad-container {
+  margin: 30px 0;
+  position: relative;
+}
+
+.targeted-ad-label {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  font-size: 12px;
+  z-index: 10;
+  border-radius: 0 0 4px 0;
+}.standalone-ad {
   margin: 30px 0;
   display: block;
-  position: relative;
-  z-index: 2;
+  position: static;
+}
+
+/* Add a debug border to see if it renders */
+.standalone-ad {
+  border: 2px solid blue;
+  min-height: 120px;
 }.home-page {
   max-width: 1200px;
   margin: 0 auto;

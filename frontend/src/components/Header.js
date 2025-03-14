@@ -13,13 +13,13 @@ const Header = () => {
   
   // Hardcoded search history
   const searchHistory = [
-    'Wireless headphones',
-    'Smart watch',
-    'Coffee maker',
-    'Robot vacuum',
-    'Bluetooth speaker',
-    'Gaming mouse',
-    'Fitness tracker'
+    'bestselling smart watches',
+    'nike air jordan limited edition',
+    'oled tv free next day delivery',
+    'airpods pro lowest price',
+    'playstation 5 bundle in stock',
+    'dyson airwrap complete gift set',
+    'new iphone pro max pre-order now',
   ];
   
   // Categories for the navigation
