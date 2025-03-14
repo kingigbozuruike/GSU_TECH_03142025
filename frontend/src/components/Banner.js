@@ -30,12 +30,18 @@ const Banner = () => {
   
   // Auto-slide every 5 seconds
   useEffect(() => {
+    console.log("Setting up auto-slide timer");
     const interval = setInterval(() => {
-      nextSlide();
+      if (!isTransitioning) {
+        nextSlide();
+      }
     }, 5000);
     
-    return () => clearInterval(interval);
-  }, []);
+    return () => {
+      console.log("Clearing timer");
+      clearInterval(interval);
+    };
+  }, [isTransitioning]); // Add isTransitioning as dependency
 
   return (
     <div className="banner-container">

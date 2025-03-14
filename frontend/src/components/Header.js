@@ -71,7 +71,7 @@ const Header = () => {
     <header className="header">
       <div className="top-bar">
         <Link to="/" className="logo">
-          ShopEasy
+          gramzon
         </Link>
         
         <div className="search-bar" ref={searchRef}>
@@ -115,7 +115,7 @@ const Header = () => {
         </div>
         
         <div className="user-actions">
-          <Link to="/login" className="account">
+          <Link to="/profile" className="account">
             <FaUser />
             <span>Account</span>
           </Link>

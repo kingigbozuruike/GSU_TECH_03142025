@@ -60,10 +60,10 @@ const tvProductData = {
     'Screen mirroring from compatible smartphones and tablets'
   ],
   additionalImages: [
-    'https://m.media-amazon.com/images/I/81zozVZ4BKL.AC_SL1500.jpg',
-    'https://m.media-amazon.com/images/I/713-3qnI41L.AC_SX679.jpg',
-    'https://m.media-amazon.com/images/I/810dRcKrDIL.AC_SX679.jpg',
-    'https://m.media-amazon.com/images/I/71Vx9NQgAlL.AC_SX679.jpg'
+    'https://m.media-amazon.com/images/I/81zozVZ4BKL._AC_SL1500_.jpg',
+    'https://m.media-amazon.com/images/I/713-3qnI41L._AC_SX679_.jpg',
+    'https://m.media-amazon.com/images/I/810dRcKrDIL._AC_SX679_.jpg',
+    'https://m.media-amazon.com/images/I/71Vx9NQgAlL._AC_SX679_.jpg'
   ],
   reviews: [
     {
@@ -147,7 +147,6 @@ const ProductDetail = () => {
   
   // Use the hardcoded TV data if the ID matches, otherwise find from products array
   const product = productId === '3' ? tvProductData : products.find(p => p._id === productId);
-  
   // Set flag when user views a product - ADD THIS NEW USEEFFECT
   useEffect(() => {
     // Only set the flag if we have a valid product
@@ -164,7 +163,6 @@ const ProductDetail = () => {
       localStorage.setItem('productComment', positiveComment);
     }
   }, [productId, product]);
-  
   // Related products (same category)
   const relatedProducts = products
     .filter(p => p.category === product?.category && p._id !== productId)
@@ -279,7 +277,7 @@ const ProductDetail = () => {
         <div className="product-images">
           <div className="main-image">
             <img 
-              src='https://m.media-amazon.com/images/I/71Tc306ZIGL.AC_SX679.jpg' 
+              src='https://m.media-amazon.com/images/I/71Tc306ZIGL._AC_SX679_.jpg' 
               alt={product.name} 
               className="product-detail-image"
             />
@@ -291,8 +289,8 @@ const ProductDetail = () => {
                 className={`thumbnail ${selectedImage === 0 ? 'active' : ''}`}
                 onClick={() => setSelectedImage(0)}
               >
-                <img src='https://m.media-amazon.com/images/I/61r1mHaKMTL.AC_SL1500.jpg' alt="Main" />
-              </div>
+              <img src='https://m.media-amazon.com/images/I/61r1mHaKMTL._AC_SL1500_.jpg' alt="Main" />
+            </div>
               
               {product.additionalImages.map((img, index) => (
                 <div 
