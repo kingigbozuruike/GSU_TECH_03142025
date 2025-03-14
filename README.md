@@ -1,6 +1,9 @@
 # Adlite AI
 
-This project is a full-stack MERN (MongoDB, Express, React, Node.js) application. Consisting of a backend server built with Express and a frontend client built with React, it is an AI-powered ad optimization platform that leverages edge computing and sentiment analysis to deliver highly personalized ads
+This project is a full-stack MERN (MongoDB, Express, React, Node.js) application. Consisting of a backend server built with Express and a frontend client built with React, it is an AI-powered ad optimization platform that leverages edge computing and sentiment analysis to deliver highly personalized ads.
+
+# YouTube Live Demo
+https://www.youtube.com/watch?v=3JTBOWiWyCU
 
 ## Project Structure
 
