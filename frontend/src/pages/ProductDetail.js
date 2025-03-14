@@ -147,7 +147,22 @@ const ProductDetail = () => {
   
   // Use the hardcoded TV data if the ID matches, otherwise find from products array
   const product = productId === '3' ? tvProductData : products.find(p => p._id === productId);
-  
+  // Set flag when user views a product - ADD THIS NEW USEEFFECT
+  useEffect(() => {
+    // Only set the flag if we have a valid product
+    if (product) {
+      // Set flag to indicate product has been viewed
+      localStorage.setItem('hasViewedProduct', 'true');
+      
+      // Optionally store the specific product info if needed later
+      localStorage.setItem('lastViewedProductId', productId);
+      localStorage.setItem('lastViewedProductName', product.name);
+      
+      // For the positive comment demo
+      const positiveComment = "I love this product! The quality is excellent and it works perfectly.";
+      localStorage.setItem('productComment', positiveComment);
+    }
+  }, [productId, product]);
   // Related products (same category)
   const relatedProducts = products
     .filter(p => p.category === product?.category && p._id !== productId)
@@ -274,8 +289,8 @@ const ProductDetail = () => {
                 className={`thumbnail ${selectedImage === 0 ? 'active' : ''}`}
                 onClick={() => setSelectedImage(0)}
               >
-                <img src='https://m.media-amazon.com/images/I/61r1mHaKMTL._AC_SL1500_.jpg' alt="Main" />
-              </div>
+              <img src='https://m.media-amazon.com/images/I/61r1mHaKMTL._AC_SL1500_.jpg' alt="Main" />
+            </div>
               
               {product.additionalImages.map((img, index) => (
                 <div 
