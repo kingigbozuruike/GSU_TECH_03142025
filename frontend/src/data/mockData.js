@@ -1,11 +1,27 @@
-// Product data
+import headphone from '../images/headphone.png';
+import smartwatch from '../images/smartwatch.png';
+import tv from '../images/tv.png';
+import speaker from '../images/wirelessspeaker.png';
+import vacuum from '../images/robotcleaner.png';
+import camera from '../images/camera.png';
+import coffeemaker from '../images/coffee.png';
+import airpurifier from '../images/purifier.png';
+import officechair from '../images/ergonomic.png';
+import cookwareset from '../images/cookware.png';
+import gamingmouse from '../images/mouse.png';
+import keyboard from '../images/keyboard.png';
+import toothbrush from '../images/brush.png';
+import wristband from '../images/tracker.png';
+import earbuds from '../images/earpods.png';
+import powerbank from '../images/powerbank.png';
+
 export const products = [
     {
       _id: '1',
       name: 'Wireless Noise Cancelling Headphones',
       price: 199.99,
       rating: 4.5,
-      image: '/api/placeholder/220/200',
+      image: headphone,
       discount: 15,
       category: 'electronics',
       description: 'Experience premium sound quality with these wireless noise cancelling headphones. Perfect for travel, work, or relaxation.',
@@ -19,7 +35,7 @@ export const products = [
       name: 'Smart Watch with Fitness Tracker',
       price: 149.99,
       rating: 4.2,
-      image: '/api/placeholder/220/200',
+      image: smartwatch,
       discount: 10,
       category: 'electronics',
       description: 'Track your fitness goals, receive notifications, and more with this advanced smart watch.',
@@ -33,7 +49,7 @@ export const products = [
       name: 'Ultra HD 4K Smart TV - 55 inch',
       price: 499.99,
       rating: 4.7,
-      image: '/api/placeholder/220/200',
+      image: tv,
       discount: 20,
       category: 'electronics',
       description: 'Immerse yourself in stunning 4K resolution with this Smart TV featuring built-in streaming apps and voice control.',
@@ -47,7 +63,7 @@ export const products = [
       name: 'Wireless Bluetooth Speaker',
       price: 79.99,
       rating: 4.3,
-      image: '/api/placeholder/220/200',
+      image: speaker,
       discount: 5,
       category: 'electronics',
       description: 'Portable wireless speaker with rich sound and long battery life. Perfect for indoor or outdoor use.',
@@ -61,7 +77,7 @@ export const products = [
       name: 'Robot Vacuum Cleaner',
       price: 249.99,
       rating: 4.4,
-      image: '/api/placeholder/220/200',
+      image: vacuum,
       discount: 12,
       category: 'home-kitchen',
       description: 'Keep your floors clean with minimal effort. This smart vacuum navigates your home and returns to its dock when done.',
@@ -75,7 +91,7 @@ export const products = [
       name: 'Professional Digital Camera',
       price: 699.99,
       rating: 4.8,
-      image: '/api/placeholder/220/200',
+      image: camera,
       discount: 8,
       category: 'electronics',
       description: 'Capture stunning photos and videos with this professional-grade digital camera.',
@@ -89,7 +105,7 @@ export const products = [
       name: 'Coffee Maker with Grinder',
       price: 129.99,
       rating: 4.1,
-      image: '/api/placeholder/220/200',
+      image: coffeemaker,
       discount: 15,
       category: 'home-kitchen',
       description: 'Brew fresh coffee from whole beans with this all-in-one coffee maker and grinder.',
@@ -103,7 +119,7 @@ export const products = [
       name: 'Air Purifier for Large Rooms',
       price: 189.99,
       rating: 4.6,
-      image: '/api/placeholder/220/200',
+      image: airpurifier,
       discount: 10,
       category: 'home-kitchen',
       description: 'Breathe cleaner air with this large room air purifier that removes allergens, dust, and odors.',
@@ -117,7 +133,7 @@ export const products = [
       name: 'Ergonomic Office Chair',
       price: 159.99,
       rating: 4.4,
-      image: '/api/placeholder/220/200',
+      image: officechair,
       discount: 0,
       category: 'furniture',
       description: 'Work comfortably with this adjustable ergonomic office chair designed for all-day support.',
@@ -131,7 +147,7 @@ export const products = [
       name: 'Stainless Steel Cookware Set',
       price: 119.99,
       rating: 4.2,
-      image: '/api/placeholder/220/200',
+      image: cookwareset,
       discount: 10,
       category: 'home-kitchen',
       description: 'Complete 10-piece stainless steel cookware set ideal for any kitchen.',
@@ -145,7 +161,7 @@ export const products = [
       name: 'Wireless Gaming Mouse',
       price: 59.99,
       rating: 4.5,
-      image: '/api/placeholder/220/200',
+      image: gamingmouse,
       discount: 0,
       category: 'electronics',
       description: 'Gain a competitive edge with this responsive wireless gaming mouse featuring customizable buttons.',
@@ -159,7 +175,7 @@ export const products = [
       name: 'Portable Bluetooth Keyboard',
       price: 39.99,
       rating: 4.0,
-      image: '/api/placeholder/220/200',
+      image: keyboard,
       discount: 5,
       category: 'electronics',
       description: 'Type on the go with this compact, foldable Bluetooth keyboard compatible with all devices.',
@@ -173,7 +189,7 @@ export const products = [
       name: 'Electric Toothbrush',
       price: 69.99,
       rating: 4.3,
-      image: '/api/placeholder/220/200',
+      image: toothbrush,
       discount: 8,
       category: 'health',
       description: 'Achieve better oral hygiene with this rechargeable electric toothbrush with multiple cleaning modes.',
@@ -187,7 +203,7 @@ export const products = [
       name: 'Fitness Tracker Wristband',
       price: 49.99,
       rating: 4.1,
-      image: '/api/placeholder/220/200',
+      image: wristband,
       discount: 0,
       category: 'electronics',
       description: 'Monitor your steps, heart rate, sleep, and more with this waterproof fitness tracker.',
@@ -201,7 +217,7 @@ export const products = [
       name: 'Wireless Earbuds',
       price: 89.99,
       rating: 4.6,
-      image: '/api/placeholder/220/200',
+      image: earbuds,
       discount: 15,
       category: 'electronics',
       description: 'True wireless earbuds with premium sound quality and long battery life.',
@@ -215,7 +231,7 @@ export const products = [
       name: 'Portable Power Bank',
       price: 29.99,
       rating: 4.4,
-      image: '/api/placeholder/220/200',
+      image: powerbank,
       discount: 0,
       category: 'electronics',
       description: 'Keep your devices charged on the go with this high-capacity portable power bank.',
@@ -231,7 +247,7 @@ export const products = [
     {
       _id: 'ad1',
       name: 'Summer Sale Banner',
-      image: '/api/placeholder/1200/120',
+      image: banner2,
       link: '/category/deals',
       altText: 'Summer Sale - Up to 50% off',
       position: 'home-top'
@@ -290,10 +306,15 @@ export const products = [
   ];
   
   // Banner data
+import banner1 from '../images/banner1.jpg';
+import banner2 from '../images/banner2.jpg';
+import banner3 from '../images/banner3.jpg';
+import banner4 from '../images/banner4.jpg';
+
   export const banners = [
     {
       id: 'banner1',
-      image: '../images/banner2.jpg',
+      image: banner1,
       title: 'Spring Sale!',
       subtitle: 'Up to 40% off on selected items',
       buttonText: 'Shop Now',
@@ -301,7 +322,7 @@ export const products = [
     },
     {
       id: 'banner2',
-      image: '../images/banner1.jpg',
+      image: banner2,
       title: 'New Electronics',
       subtitle: 'Discover the latest tech gadgets',
       buttonText: 'Explore',
@@ -309,7 +330,7 @@ export const products = [
     },
     {
       id: 'banner3',
-      image: '../images/banner3.jpg',
+      image: banner3,
       title: 'Home & Kitchen Essentials',
       subtitle: 'Upgrade your home with our premium selection',
       buttonText: 'Shop Collection',
@@ -317,7 +338,7 @@ export const products = [
     },
     {
       id: 'banner4',
-      image: '../images/banner4.jpg',
+      image: banner4,
       title: 'Limited Time Offers',
       subtitle: 'Don\'t miss these exclusive deals',
       buttonText: 'See Offers',

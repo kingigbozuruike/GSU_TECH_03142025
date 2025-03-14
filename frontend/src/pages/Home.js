@@ -23,6 +23,11 @@ const Home = () => {
   const [currentTopAd, setCurrentTopAd] = useState(topAds[0]);
   const [currentMiddleAd, setCurrentMiddleAd] = useState(middleAds[0]);
   const [currentBottomAd, setCurrentBottomAd] = useState(bottomAds[0]);
+
+  console.log("Top Ads", topAds);
+  console.log("Middle Ads", middleAds);
+  console.log("Bottom Ads", bottomAds);
+  console.log("Current Top Ad", currentTopAd);
   
   // Rotate ads periodically
   useEffect(() => {
@@ -51,16 +56,11 @@ const Home = () => {
 
   return (
     <div className="home-page">
+      {/* Banner component */}
       <Banner />
       
-      {currentTopAd && (
-        <AdSlot
-          id={currentTopAd._id}
-          image={currentTopAd.image}
-          alt={currentTopAd.altText}
-          link={currentTopAd.link}
-        />
-      )}
+      {/* Add a clear visual separator */}
+      <div style={{ height: '20px', clear: 'both' }}></div>
       
       <section className="featured-products">
         <h2 className="section-title">Featured Products</h2>
@@ -76,6 +76,15 @@ const Home = () => {
         </div>
       </section>
       
+      {/* Top Ad Slot */}
+      {currentTopAd && (
+        <AdSlot
+            id={currentTopAd._id}
+            image={currentTopAd.image}
+            alt={currentTopAd.altText}
+            link={currentTopAd.link}
+          />
+      )}
       <section className="deals-section">
         <h2 className="section-title">Today's Deals</h2>
         <ProductGrid products={dealsProducts} />
