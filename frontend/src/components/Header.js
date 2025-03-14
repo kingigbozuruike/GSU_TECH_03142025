@@ -115,7 +115,7 @@ const Header = () => {
         </div>
         
         <div className="user-actions">
-          <Link to="/login" className="account">
+          <Link to="/profile" className="account">
             <FaUser />
             <span>Account</span>
           </Link>
